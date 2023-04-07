@@ -19,7 +19,7 @@ public class Main {
 		for (int i = 0 ; i < FixedValues.CYCLE_COUNT; i++){
 			for (int j = 0; j <= FixedValues.PHILOSOPHER_COUNT / 2; j++){
 				executor.submit(new EatTask(j));
-				 Thread.sleep(ThreadLocalRandom.current().nextInt(50, 100));
+				Thread.sleep(ThreadLocalRandom.current().nextInt(50, 100));
 				executor.submit(new EatTask(j + 2));
 			}
 		}
